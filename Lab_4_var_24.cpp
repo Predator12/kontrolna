@@ -14,9 +14,11 @@ public:
 
 	void basicInfo()
 	{
-		cout << "- вага: "<< weight << endl;
-		cout << "- кiлькiсть мiсць: "<< seats << endl;
-  	}
+		cout << "- weight: "<< weight << endl;
+		
+		cout << "- number of seats: "<< seats << endl;
+  	
+	}
 
 
 
@@ -30,12 +32,13 @@ class military: public plain
 public:
 	int power;
 
-void get(){
-cout << "Вага: ";
+void get()
+{
+cout << "weight: ";
 cin >> weight;
-cout << "Кiлькiсть мiсць: ";
+cout << "number of seats: ";
 cin >> seats;
-cout << "Вогнева мiць: ";
+cout << "firepower: ";
 cin >> power;
 
 
@@ -47,12 +50,13 @@ class civilc: public plain
 public:
 	int price;
 
-void get(){
-cout << "Вага: ";
+void get()
+{
+cout << "weight: ";
 cin >> weight;
-cout << "Кiлькiсть мiсць: ";
+cout << "number of seats: ";
 cin >> seats;
-cout << "Цiна: ";
+cout << "price: ";
 cin >> price;
 
 }
@@ -63,7 +67,7 @@ class pass: public civilc
 public:
 	void out()
 	{
-		cout<<"- цiна: "<< price;
+		cout<<"- price: "<< price;
 	}
 };
 
@@ -72,7 +76,7 @@ class sport: public civilc
 public:
 	void out()
 	{
-		cout<<"- цiна: "<< price;
+		cout<<"- price: "<< price;
 	}
 };
 
@@ -81,7 +85,7 @@ class glider: public civilc
 public:
 	void out()
 	{
-		cout<<"- цiна: "<< price;
+		cout<<"- price: "<< price;
 	}
 };
 
@@ -91,7 +95,7 @@ class dest: public military
 public:
 	void out()
 	{
-		cout << "- вогнева мiць: "<< power;
+		cout << "- firepower: "<< power;
 	}
 
 };
@@ -101,7 +105,7 @@ class bomb: public military
 public:
 	void out()
 	{
-			cout << "- вогнева мiць: "<< power;
+			cout << "- firepower: "<< power;
 	}
 
 };
@@ -110,7 +114,7 @@ public:
 int main()
  {
     int t;
-    setlocale(LC_ALL, "Russian");
+    setlocale(LC_ALL, "Ukrain");
 
 	plain *mas[6];
 
@@ -120,12 +124,12 @@ int main()
 	mas[4]=new dest;
 	mas[5]=new bomb;
 
-	cout << "Лiтаки: \n";
-	cout <<"1. Пасажирський лiтак\n";
-	cout <<"2. Спортивний лiтак\n";
-	cout <<"3. Планер\n";
-	cout <<"4. Винищувач\n";
-	cout <<"5. Бомбардувальник\n";
+	cout << "plain: \n";
+	cout <<"1. pass plain \n";
+	cout <<"2. sport plain \n";
+	cout <<"3. glider \n";
+	cout <<"4. dest \n";
+	cout <<"5. bomb\n";
 
 	cout << endl;
 	cin >> t;
